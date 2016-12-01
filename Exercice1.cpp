@@ -20,9 +20,9 @@ void remove_dead_enemies(std::list<Enemy>& enemies)
 	//TODO: Remove enemies with hp == 0
 	for (auto it = enemies.begin(); it != enemies.end(); ++it)
 	{
-		if (e.hp == 0)
+		if ((*it).hp == 0)
 		{
-			enemies.remove(e);
+			enemies.erase(it++);  // alternatively, i = items.erase(i);
 		}
 	}
 }
